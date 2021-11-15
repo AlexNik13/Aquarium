@@ -13,6 +13,10 @@ public class Fish {
         this.weight = weight;
     }
 
+    public int getAmountEat() {
+        return amountEat;
+    }
+
     public int getWeight() {
         return weight;
     }
@@ -24,9 +28,6 @@ public class Fish {
 
     @Override
     public String toString() {
-        return "Fish{" +
-                "weight=" + weight +
-                ", amountEat=" + amountEat +
-                '}';
+        return "\tWeight = " + weight + ", \t Eat = " + amountEat ;
     }
 }

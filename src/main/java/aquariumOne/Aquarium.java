@@ -34,9 +34,16 @@ public class Aquarium {
 
     public void printStatistics(){
         int i = 0;
+
+        int sumWeight = 0;
+        int sumEat = 0;
         for (Fish predator : predators) {
-            System.out.println(++i + " " + predator.toString());
+            System.out.println("predator "+ ++i + ": " + predator.toString());
+            sumWeight+= predator.getWeight();
+            sumEat+= predator.getAmountEat();
         }
+        System.out.println("\nTotal");
+        System.out.println("predator = "+ i + "\tWeight = " + sumWeight + "\tEat = " + sumEat);
     }
 
     void createFishGuppy() {
