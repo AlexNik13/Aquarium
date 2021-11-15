@@ -54,6 +54,21 @@ public class Aquarium {
     }
 
     public void eat() {
-        predators.get(RND.next(predators.size())).eat(guppies.remove(RND.next(guppies.size())).getWeight());
+        Fish predator = getPredator();
+        Fish guppy = getGuppy();
+        predator.eat(guppy);
+        removeGuppy(guppy);
+    }
+
+    private void removeGuppy(Fish guppy) {
+        guppies.remove(guppy);
+    }
+
+    private Fish getPredator(){
+        return predators.get(RND.next(predators.size()));
+    }
+
+    private Fish getGuppy(){
+        return guppies.get(RND.next(guppies.size()));
     }
 }

@@ -17,8 +17,8 @@ public class Fish {
         return weight;
     }
 
-    public void eat(int fish){
-        weight += fish;
+    public void eat(Fish fish){
+        weight += fish.getWeight();
         amountEat++;
     }
 
