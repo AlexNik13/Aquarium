@@ -1,9 +1,5 @@
 package aquariumOne.fish;
 
-import aquariumOne.RND;
-
-import java.util.Random;
-
 public class Fish {
 
     private int weight;

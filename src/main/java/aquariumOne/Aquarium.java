@@ -1,6 +1,7 @@
 package aquariumOne;
 
 import aquariumOne.fish.Fish;
+import common.RND;
 
 import java.util.ArrayList;
 
