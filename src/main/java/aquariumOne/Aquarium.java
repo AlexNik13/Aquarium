@@ -1,15 +1,14 @@
 package aquariumOne;
 
-import aquariumOne.fish.Guppy;
-import aquariumOne.fish.Predator;
+import aquariumOne.fish.Fish;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Aquarium {
 
-    private ArrayList<Guppy> guppies;
-    private ArrayList<Predator> predators;
+    private ArrayList<Fish> guppies;
+    private ArrayList<Fish> predators;
 
     private Random RND;
 

@@ -4,15 +4,19 @@ import aquariumOne.RND;
 
 import java.util.Random;
 
-public class Guppy {
-    private static Random RND = new Random();
+public class Fish {
+
     private int weight;
 
-    public Guppy() {
-        this.weight = aquariumOne.RND.next(15) + 1;
+    public Fish(int weight) {
+        this.weight = RND.next(weight) + 1;
     }
 
     public int getWeight() {
         return weight;
+    }
+
+    public void eat(int fish){
+        this.weight += fish;
     }
 }
