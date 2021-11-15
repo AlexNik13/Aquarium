@@ -7,9 +7,10 @@ import java.util.Random;
 public class Fish {
 
     private int weight;
+    private int amountEat;
 
     public Fish(int weight) {
-        this.weight = RND.next(weight) + 1;
+        this.weight = weight;
     }
 
     public int getWeight() {
@@ -17,6 +18,15 @@ public class Fish {
     }
 
     public void eat(int fish){
-        this.weight += fish;
+        weight += fish;
+        amountEat++;
+    }
+
+    @Override
+    public String toString() {
+        return "Fish{" +
+                "weight=" + weight +
+                ", amountEat=" + amountEat +
+                '}';
     }
 }
