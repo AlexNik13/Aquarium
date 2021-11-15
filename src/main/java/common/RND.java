@@ -6,6 +6,9 @@ public class RND {
     private static Random RND = new Random();
 
     public static int next(int value){
+        return RND.nextInt(value);
+    }
+    public static int weight(int value){
         return RND.nextInt(value) + 1;
     }
 }
