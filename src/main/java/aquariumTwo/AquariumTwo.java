@@ -43,16 +43,16 @@ public class AquariumTwo {
     }
 
     void createFishEatable() {
-        int rnd = RND.weight(50);
+        int rnd = RND.next(50) + 1 ;
         for (int i = 0; i < rnd; i++) {
-            guppies.add(new Guppy(RND.next(20)));
+            guppies.add(new Guppy(RND.weight(50)));
         }
     }
 
     void createFishPredators() {
-        int rnd = RND.weight(10);
+        int rnd = RND.next(10) + 1;
         for (int i = 0; i < rnd; i++) {
-            predators.add(new Piranha(RND.next(20)));
+            predators.add(new Piranha(RND.weight(50)));
         }
     }
 
