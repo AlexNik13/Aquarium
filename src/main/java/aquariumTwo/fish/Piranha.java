@@ -7,7 +7,6 @@ import java.util.Formatter;
 public class Piranha extends Fish implements Predator {
     private int amountEat;
 
-
     public Piranha(int weight) {
         super(weight, new SpeedPiranha());
     }
