@@ -19,8 +19,7 @@ public class Main {
         aquariumTwo.go();
         aquariumTwo.printStatisticsPredator();
         aquariumTwo.printStatisticsEatable();
-
-        System.out.println();
+        aquariumTwo.printStatistics();
 
     }
 

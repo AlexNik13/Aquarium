@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class AquariumTwo {
     private ArrayList<Predator> predators;
     private ArrayList<Eatable> eatables;
+    private int eatablesStart;
 
     {
         this.eatables = new ArrayList<>();
@@ -29,6 +30,18 @@ public class AquariumTwo {
         }
     }
 
+    public void feedPredator() {
+        Predator predator = getPredator();
+        Eatable eatable = getEatable();
+        if (predator.checkEat(eatable)) {
+            removeEatable(eatable);
+        }
+    }
+
+    public void printStatistics() {
+        System.out.println("хищников " + predators.size() +". Было еды "+ eatablesStart + ". Осталось " + eatables.size()+ ".");
+    }
+
     public void printStatisticsPredator() {
         for (int i = 0; i < predators.size(); i++) {
             System.out.println((i+1) +". " + predators.get(i).toString());
@@ -44,21 +57,11 @@ public class AquariumTwo {
 
     public void addFishEatable(Eatable eatable ) {
         eatables.add(eatable);
+        eatablesStart = eatables.size();
     }
 
     public void addFishPredators(Predator predator) {
             predators.add(predator);
-    }
-
-    public void feedPredator() {
-        Predator predator = getPredator();
-        Eatable eatable = getEatable();
-
-        if(predator.getSpeed() > eatable.getSpeed()){
-            predator.eat(eatable);
-            removeEatable(eatable);
-        }
-
     }
 
     private void removeEatable(Eatable guppy) {
