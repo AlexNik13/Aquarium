@@ -1,12 +1,14 @@
 package aquariumTwo.fish;
 
-import common.RND;
+import aquariumTwo.fish.speed.SpeedBehavior;
 
 public class Fish {
     private int weight;
+    private SpeedBehavior speedBehavior;
 
-    public Fish(int weight) {
+    public Fish(int weight, SpeedBehavior behavior) {
         this.weight = checkWeight(weight);
+        this.speedBehavior = behavior;
     }
 
     private int checkWeight(int weight) {
@@ -16,12 +18,15 @@ public class Fish {
         return weight;
     }
 
-    public int getWeight() {
-        return weight;
-    }
-
     public void addWeight(int weight) {
         this.weight += weight;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
+    public int getSpeed(){
+        return speedBehavior.countSpeed(weight);
+    }
 }
