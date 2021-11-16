@@ -15,8 +15,7 @@ public class AquariumTwo {
     }
 
     public AquariumTwo() {
-        createFishEatable();
-        createFishPredators();
+
     }
 
     public void go() {
@@ -28,27 +27,20 @@ public class AquariumTwo {
                 e.printStackTrace();
             }
         }
-        printStatistics();
     }
 
-    public void printStatistics() {
+    public void printStatisticsPredator() {
         for (int i = 0; i < predators.size(); i++) {
             System.out.println((i+1) +". " + predators.get(i).toString());
         }
     }
 
-    void createFishEatable() {
-        int rnd = RND.fish(50) + 1 ;
-        for (int i = 0; i < rnd; i++) {
-            guppies.add(new Guppy(RND.weight(50)));
-        }
+    public void addFishEatable(Eatable eatable ) {
+        guppies.add(eatable);
     }
 
-    void createFishPredators() {
-        int rnd = RND.fish(10) + 1;
-        for (int i = 0; i < rnd; i++) {
-            predators.add(new Piranha(RND.weight(50)));
-        }
+    public void addFishPredators(Predator predator) {
+            predators.add(predator);
     }
 
     public void feedPredator() {
