@@ -1,15 +1,11 @@
 package aquariumTwo;
 
-import aquariumTwo.fish.Eatable;
-import aquariumTwo.fish.Guppy;
-import aquariumTwo.fish.Piranha;
-import aquariumTwo.fish.Predator;
+import aquariumTwo.fish.*;
 import common.RND;
 
 import java.util.ArrayList;
 
 public class AquariumTwo {
-
     private ArrayList<Predator> predators;
     private ArrayList<Eatable> guppies;
 
@@ -36,21 +32,20 @@ public class AquariumTwo {
     }
 
     public void printStatistics() {
-        int i = 1;
-        for (Predator predator : predators) {
-            System.out.printf("Хищник %-5d: весит: %-4d , сьел %-4d рыбешек.\n", i++, predator.getWeight(), predator.getAmountEat());
+        for (int i = 0; i < predators.size(); i++) {
+            System.out.println((i+1) +". " + predators.get(i).toString());
         }
     }
 
     void createFishEatable() {
-        int rnd = RND.next(50) + 1 ;
+        int rnd = RND.fish(50) + 1 ;
         for (int i = 0; i < rnd; i++) {
             guppies.add(new Guppy(RND.weight(50)));
         }
     }
 
     void createFishPredators() {
-        int rnd = RND.next(10) + 1;
+        int rnd = RND.fish(10) + 1;
         for (int i = 0; i < rnd; i++) {
             predators.add(new Piranha(RND.weight(50)));
         }
@@ -68,10 +63,10 @@ public class AquariumTwo {
     }
 
     private Predator getPredator() {
-        return predators.get(RND.next(predators.size()));
+        return predators.get(RND.fish(predators.size()));
     }
 
     private Eatable getEatable() {
-        return guppies.get(RND.next(guppies.size()));
+        return guppies.get(RND.fish(guppies.size()));
     }
 }

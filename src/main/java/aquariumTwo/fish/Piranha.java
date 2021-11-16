@@ -1,6 +1,8 @@
 package aquariumTwo.fish;
 
-public class Piranha extends Fish implements Predator{
+import java.util.Formatter;
+
+public class Piranha extends Fish implements Predator {
     private int amountEat;
 
     public Piranha(int weight) {
@@ -13,10 +15,14 @@ public class Piranha extends Fish implements Predator{
         amountEat++;
     }
 
-    @Override
     public int getAmountEat() {
         return amountEat;
     }
 
-
+    @Override
+    public String toString() {
+        Formatter str = new Formatter();
+        str.format("Piranha весит %-4d грамм. Сьела %-4d рыбешек.", getWeight(), amountEat);
+        return str.toString();
+    }
 }

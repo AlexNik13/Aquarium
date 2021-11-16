@@ -6,14 +6,14 @@ public class Fish {
     private int weight;
 
     public Fish(int weight) {
-        this.weight = weight;
-        checkWeight();
+        this.weight = checkWeight(weight);
     }
 
-    private void checkWeight() {
+    private int checkWeight(int weight) {
         if (weight <= 0) {
             throw new IllegalArgumentException("weight must be greater when 0");
         }
+        return weight;
     }
 
     public int getWeight() {
@@ -23,4 +23,5 @@ public class Fish {
     public void addWeight(int weight) {
         this.weight += weight;
     }
+
 }
