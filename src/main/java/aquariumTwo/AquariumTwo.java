@@ -35,6 +35,13 @@ public class AquariumTwo {
         }
     }
 
+    public void printStatisticsEatable() {
+
+        for (int i = 0; i < eatables.size(); i++) {
+            System.out.println((i+1) +". " + eatables.get(i).toString());
+        }
+    }
+
     public void addFishEatable(Eatable eatable ) {
         eatables.add(eatable);
     }
