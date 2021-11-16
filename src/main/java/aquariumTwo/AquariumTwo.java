@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 public class AquariumTwo {
     private ArrayList<Predator> predators;
-    private ArrayList<Eatable> guppies;
+    private ArrayList<Eatable> eatables;
 
     {
-        this.guppies = new ArrayList<>();
+        this.eatables = new ArrayList<>();
         this.predators = new ArrayList<>();
     }
 
@@ -19,7 +19,7 @@ public class AquariumTwo {
     }
 
     public void go() {
-        while (!guppies.isEmpty()) {
+        while (!eatables.isEmpty() && checkCanPredatorsCatchFood()) {
             feedPredator();
             try {
                 Thread.sleep(1);
@@ -36,7 +36,7 @@ public class AquariumTwo {
     }
 
     public void addFishEatable(Eatable eatable ) {
-        guppies.add(eatable);
+        eatables.add(eatable);
     }
 
     public void addFishPredators(Predator predator) {
@@ -45,13 +45,17 @@ public class AquariumTwo {
 
     public void feedPredator() {
         Predator predator = getPredator();
-        Eatable guppy = getEatable();
-        predator.eat(guppy);
-        removeEatable(guppy);
+        Eatable eatable = getEatable();
+
+        if(predator.getSpeed() > eatable.getSpeed()){
+            predator.eat(eatable);
+            removeEatable(eatable);
+        }
+
     }
 
     private void removeEatable(Eatable guppy) {
-        guppies.remove(guppy);
+        eatables.remove(guppy);
     }
 
     private Predator getPredator() {
@@ -59,6 +63,33 @@ public class AquariumTwo {
     }
 
     private Eatable getEatable() {
-        return guppies.get(RND.fish(guppies.size()));
+        return eatables.get(RND.fish(eatables.size()));
+    }
+
+    private boolean checkCanPredatorsCatchFood(){
+        int maxSpeedPredator = getMaxSpeedPredator();
+        int minSpeedEatable = getMinSpeedEatable();
+
+        return maxSpeedPredator > minSpeedEatable;
+    }
+
+    private int getMaxSpeedPredator(){
+        int maxSpeed = predators.get(0).getSpeed();
+        for (int i = 1; i < predators.size(); i++){
+            if(maxSpeed < predators.get(i).getSpeed() ){
+                maxSpeed = predators.get(i).getSpeed();
+            }
+        }
+        return maxSpeed;
+    }
+
+    private int getMinSpeedEatable(){
+        int minSpeed = eatables.get(0).getSpeed();
+        for (int i = 1; i < eatables.size(); i++){
+            if(minSpeed > eatables.get(i).getSpeed() ){
+                minSpeed = eatables.get(i).getSpeed();
+            }
+        }
+        return minSpeed;
     }
 }

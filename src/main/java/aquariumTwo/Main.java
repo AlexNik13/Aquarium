@@ -1,7 +1,6 @@
 package aquariumTwo;
 
-import aquariumTwo.fish.Guppy;
-import aquariumTwo.fish.Piranha;
+import aquariumTwo.fish.*;
 import common.RND;
 
 public class Main {
@@ -19,6 +18,8 @@ public class Main {
 
         aquariumTwo.go();
         aquariumTwo.printStatisticsPredator();
+
+
 
     }
 
