@@ -2,7 +2,7 @@ package aquariumTwo;
 
 import aquariumTwo.animal.fish.eatable.Eatable;
 import aquariumTwo.animal.fish.predator.Predator;
-import aquariumTwo.fish.*;
+import aquariumTwo.animal.fish.*;
 import common.RND;
 
 import java.util.ArrayList;
