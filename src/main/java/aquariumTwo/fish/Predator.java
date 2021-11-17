@@ -1,6 +1,7 @@
 package aquariumTwo.fish;
 
 public interface Predator {
-    boolean checkEat(Eatable fish);
-    public int getSpeed();
+    boolean checkCatch (Eatable fish);
+    void eat(Eatable fish);
+    int getSpeed();
 }

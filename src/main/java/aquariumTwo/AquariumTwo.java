@@ -6,14 +6,9 @@ import common.RND;
 import java.util.ArrayList;
 
 public class AquariumTwo {
-    private ArrayList<Predator> predators;
-    private ArrayList<Eatable> eatables;
-    private int eatablesStart;
+    private ArrayList<Predator> predators = new ArrayList<>();
+    private ArrayList<Eatable> eatables = new ArrayList<>();
 
-    {
-        this.eatables = new ArrayList<>();
-        this.predators = new ArrayList<>();
-    }
 
     public AquariumTwo() {
 
@@ -33,13 +28,15 @@ public class AquariumTwo {
     public void feedPredator() {
         Predator predator = getPredator();
         Eatable eatable = getEatable();
-        if (predator.checkEat(eatable)) {
+
+        if(predator.checkCatch(eatable)){
+            predator.eat(eatable);
             removeEatable(eatable);
         }
     }
 
     public void printStatistics() {
-        System.out.println("хищников " + predators.size() +". Было еды "+ eatablesStart + ". Осталось " + eatables.size()+ ".");
+        System.out.println("Хищников " + predators.size() + ". Осталось еды " + eatables.size()+ ".");
     }
 
     public void printStatisticsPredator() {
@@ -57,7 +54,7 @@ public class AquariumTwo {
 
     public void addFishEatable(Eatable eatable ) {
         eatables.add(eatable);
-        eatablesStart = eatables.size();
+
     }
 
     public void addFishPredators(Predator predator) {
