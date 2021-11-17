@@ -19,7 +19,7 @@ public class Fish {
     }
 
     public void addWeight(int weight) {
-        this.weight += weight;
+        this.weight += checkWeight(weight);
     }
 
     public int getWeight() {

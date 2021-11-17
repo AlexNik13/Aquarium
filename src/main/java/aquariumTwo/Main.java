@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         AquariumTwo aquariumTwo = new AquariumTwo();
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 45; i++) {
             aquariumTwo.addFishEatable(new Guppy(RND.weight(20)));
         }
 
@@ -20,6 +20,7 @@ public class Main {
         aquariumTwo.printStatisticsPredator();
         aquariumTwo.printStatisticsEatable();
         aquariumTwo.printStatistics();
+
 
     }
 

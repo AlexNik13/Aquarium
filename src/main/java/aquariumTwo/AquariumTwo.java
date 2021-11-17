@@ -4,15 +4,12 @@ import aquariumTwo.fish.*;
 import common.RND;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Optional;
 
 public class AquariumTwo {
     private ArrayList<Predator> predators = new ArrayList<>();
     private ArrayList<Eatable> eatables = new ArrayList<>();
-
-
-    public AquariumTwo() {
-
-    }
 
     public void go() {
         while (!eatables.isEmpty() && checkCanPredatorsCatchFood()) {
@@ -29,7 +26,7 @@ public class AquariumTwo {
         Predator predator = getPredator();
         Eatable eatable = getEatable();
 
-        if(predator.checkCatch(eatable)){
+        if(predator.isCatch(eatable)){
             predator.eat(eatable);
             removeEatable(eatable);
         }
@@ -81,22 +78,20 @@ public class AquariumTwo {
     }
 
     private int getMaxSpeedPredator(){
-        int maxSpeed = predators.get(0).getSpeed();
-        for (int i = 1; i < predators.size(); i++){
-            if(maxSpeed < predators.get(i).getSpeed() ){
-                maxSpeed = predators.get(i).getSpeed();
-            }
-        }
-        return maxSpeed;
+        return predators.stream()
+                .map(Predator::getSpeed)
+                .max(Comparator.comparingInt(p -> p))
+                .orElse(0);
     }
 
     private int getMinSpeedEatable(){
-        int minSpeed = eatables.get(0).getSpeed();
-        for (int i = 1; i < eatables.size(); i++){
-            if(minSpeed > eatables.get(i).getSpeed() ){
-                minSpeed = eatables.get(i).getSpeed();
-            }
-        }
-        return minSpeed;
+        return eatables.stream()
+                .map(Eatable::getSpeed)
+                .min(Comparator.comparingInt(e -> e))
+                .orElse(0);
+    }
+
+    public ArrayList<Eatable> getEatables() {
+        return eatables;
     }
 }

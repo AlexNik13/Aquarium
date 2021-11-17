@@ -18,7 +18,7 @@ public class Piranha extends Fish implements Predator {
     }
 
     @Override
-    public boolean checkCatch (Eatable fish){
+    public boolean isCatch(Eatable fish){
         if(getSpeed() > fish.getSpeed()){
             return true;
         }
