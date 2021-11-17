@@ -1,8 +1,7 @@
 package aquariumTwo.animal.fish.eatable;
 
 import aquariumTwo.animal.fish.Fish;
-import aquariumTwo.animal.fish.speed.SpeedBehavior;
-import aquariumTwo.animal.fish.speed.SpeedDanio;
+import aquariumTwo.animal.speed.SpeedDanio;
 
 import java.util.Formatter;
 
