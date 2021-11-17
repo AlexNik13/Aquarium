@@ -4,14 +4,15 @@ import aquariumTwo.animal.Eatable;
 import aquariumTwo.animal.Predator;
 import aquariumTwo.animal.fish.Fish;
 import aquariumTwo.animal.speed.SpeedBehavior;
+import aquariumTwo.animal.speed.SpeedClarias;
 
 import java.util.Formatter;
 
 public class Clarias extends Fish implements Predator {
     private int amountEat;
 
-    public Clarias(int weight, SpeedBehavior behavior) {
-        super(weight, behavior);
+    public Clarias(int weight) {
+        super(weight, new SpeedClarias());
     }
 
     @Override
