@@ -3,6 +3,7 @@ package aquariumTwo;
 import aquariumTwo.animal.fish.eatable.Danio;
 import aquariumTwo.animal.fish.eatable.Guppy;
 import aquariumTwo.animal.fish.predator.Piranha;
+import aquariumTwo.animal.lobster.predator.ProcambarusAlleni;
 import aquariumTwo.animal.shrimp.eatabl.Amano;
 import common.RND;
 
@@ -25,6 +26,10 @@ public class Main {
 
         for (int i = 0; i < 5; i++) {
             aquariumTwo.addFishPredators(new Piranha(RND.weight(10)));
+        }
+
+        for (int i = 0; i < 5; i++) {
+            aquariumTwo.addFishPredators(new ProcambarusAlleni(RND.weight(10)));
         }
 
         aquariumTwo.go();
