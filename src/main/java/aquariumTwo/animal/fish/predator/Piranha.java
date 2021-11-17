@@ -1,7 +1,8 @@
 package aquariumTwo.animal.fish.predator;
 
+import aquariumTwo.animal.Predator;
 import aquariumTwo.animal.fish.Fish;
-import aquariumTwo.animal.fish.eatable.Eatable;
+import aquariumTwo.animal.Eatable;
 import aquariumTwo.animal.speed.SpeedPiranha;
 
 import java.util.Formatter;
