@@ -1,6 +1,6 @@
-package aquariumTwo.fish;
+package aquariumTwo.animal.fish;
 
-import aquariumTwo.fish.speed.SpeedBehavior;
+import aquariumTwo.animal.fish.speed.SpeedBehavior;
 
 public class Fish {
     private int weight;

@@ -1,4 +1,4 @@
-package aquariumTwo.fish.speed;
+package aquariumTwo.animal.fish.speed;
 
 public class SpeedGuppy implements SpeedBehavior{
     @Override

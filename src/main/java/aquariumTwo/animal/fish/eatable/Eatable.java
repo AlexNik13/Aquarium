@@ -1,4 +1,4 @@
-package aquariumTwo.fish;
+package aquariumTwo.animal.fish.eatable;
 
 public interface Eatable {
     int getWeight();

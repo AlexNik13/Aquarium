@@ -1,11 +1,12 @@
 package aquariumTwo;
 
+import aquariumTwo.animal.fish.eatable.Eatable;
+import aquariumTwo.animal.fish.Predator;
 import aquariumTwo.fish.*;
 import common.RND;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Optional;
 
 public class AquariumTwo {
     private ArrayList<Predator> predators = new ArrayList<>();
