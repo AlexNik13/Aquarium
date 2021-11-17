@@ -28,10 +28,6 @@ public class Piranha extends Fish implements Predator {
         return false;
     }
 
-    public int getAmountEat() {
-        return amountEat;
-    }
-
     @Override
     public String toString() {
         Formatter str = new Formatter();

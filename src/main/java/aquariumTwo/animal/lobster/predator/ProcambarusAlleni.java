@@ -29,10 +29,6 @@ public class ProcambarusAlleni extends Lobster implements Predator {
         return false;
     }
 
-    public int getAmountEat() {
-        return amountEat;
-    }
-
     @Override
     public String toString() {
         Formatter str = new Formatter();
