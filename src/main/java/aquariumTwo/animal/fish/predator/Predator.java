@@ -1,4 +1,4 @@
-package aquariumTwo.animal.fish;
+package aquariumTwo.animal.fish.predator;
 
 import aquariumTwo.animal.fish.eatable.Eatable;
 

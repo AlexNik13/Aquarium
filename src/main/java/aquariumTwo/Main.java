@@ -1,7 +1,7 @@
 package aquariumTwo;
 
 import aquariumTwo.animal.fish.eatable.Guppy;
-import aquariumTwo.animal.fish.Piranha;
+import aquariumTwo.animal.fish.predator.Piranha;
 import aquariumTwo.fish.*;
 import common.RND;
 

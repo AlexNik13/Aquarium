@@ -1,5 +1,6 @@
-package aquariumTwo.animal.fish;
+package aquariumTwo.animal.fish.predator;
 
+import aquariumTwo.animal.fish.Fish;
 import aquariumTwo.animal.fish.eatable.Eatable;
 import aquariumTwo.animal.fish.speed.SpeedPiranha;
 
