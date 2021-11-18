@@ -2,9 +2,9 @@ package aquariumTwo.animal.lobster.predator;
 
 import aquariumTwo.animal.Eatable;
 import aquariumTwo.animal.Predator;
+import aquariumTwo.animal.behaviors.speed.BaseSpeedLobster;
+import aquariumTwo.animal.behaviors.ambush.Stealth;
 import aquariumTwo.animal.lobster.Lobster;
-import aquariumTwo.animal.speed.SpeedBehavior;
-import aquariumTwo.animal.speed.SpeedProcambarusAlleni;
 
 import java.util.Formatter;
 
@@ -12,7 +12,7 @@ public class ProcambarusAlleni extends Lobster implements Predator {
     private int amountEat;
 
     public ProcambarusAlleni(int weight) {
-        super(weight, new SpeedProcambarusAlleni());
+        super(weight, new BaseSpeedLobster(0.5), new Stealth());
     }
 
     @Override
@@ -23,7 +23,7 @@ public class ProcambarusAlleni extends Lobster implements Predator {
 
     @Override
     public boolean isCatch(Eatable eatable){
-        if(getSpeed() > eatable.getSpeed()){
+        if(getSpeed() > eatable.getSpeed() || getOpportunityAmbushStealth() > eatable.getOpportunityAmbushAttention()){
             return true;
         }
         return false;

@@ -1,14 +1,24 @@
 package aquariumTwo.animal;
 
-import aquariumTwo.animal.speed.SpeedBehavior;
+import aquariumTwo.animal.behaviors.speed.SpeedBehavior;
+import aquariumTwo.animal.behaviors.ambush.AmbushBehavior;
+import aquariumTwo.animal.behaviors.ambush.NoAmbush;
 
 public class Animal {
     private int weight;
     private SpeedBehavior speedBehavior;
+    private AmbushBehavior ambushBehavior;
 
     public Animal(int weight, SpeedBehavior behavior) {
         this.weight = checkWeight(weight);
         this.speedBehavior = behavior;
+        this.ambushBehavior = new  NoAmbush();
+    }
+
+    public Animal(int weight, SpeedBehavior speedBehavior, AmbushBehavior ambushBehavior) {
+        this.weight = weight;
+        this.speedBehavior = speedBehavior;
+        this.ambushBehavior = ambushBehavior;
     }
 
     private int checkWeight(int weight) {
@@ -28,5 +38,13 @@ public class Animal {
 
     public int getSpeed(){
         return speedBehavior.countSpeed(weight);
+    }
+
+    public int getOpportunityAmbushStealth (){
+        return ambushBehavior.valueAmbush(getWeight(), getSpeed());
+    }
+
+    public int getOpportunityAmbushAttention (){
+        return ambushBehavior.valueAmbush(getWeight(), getSpeed());
     }
 }

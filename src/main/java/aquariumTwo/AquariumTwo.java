@@ -72,7 +72,32 @@ public class AquariumTwo {
     private boolean checkCanPredatorsCatchFood(){
         int maxSpeedPredator = getMaxSpeedPredator();
         int minSpeedEatable = getMinSpeedEatable();
-        return maxSpeedPredator > minSpeedEatable;
+
+        int attention = getMinAttentionEatable();
+        int stealth = getMaxStealthPredator();
+
+        if (maxSpeedPredator > minSpeedEatable) {
+            return true;
+        }
+
+        if (stealth > attention) {
+            return true;
+        }
+        return false;
+    }
+
+    private int getMaxStealthPredator(){
+        return predators.stream()
+                .map(Predator::getOpportunityAmbushStealth)
+                .max(Comparator.comparingInt(p -> p))
+                .orElse(0);
+    }
+
+    private int getMinAttentionEatable(){
+        return eatables.stream()
+                .map(Eatable::getOpportunityAmbushAttention)
+                .min(Comparator.comparingInt(e -> e))
+                .orElse(0);
     }
 
     private int getMaxSpeedPredator(){
