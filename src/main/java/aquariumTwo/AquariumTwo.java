@@ -88,14 +88,14 @@ public class AquariumTwo {
 
     private int getMaxStealthPredator(){
         return predators.stream()
-                .map(Predator::getOpportunityAmbush)
+                .map(Predator::getOpportunityAmbushStealth)
                 .max(Comparator.comparingInt(p -> p))
                 .orElse(0);
     }
 
     private int getMinAttentionEatable(){
         return eatables.stream()
-                .map(Eatable::getOpportunityAmbush)
+                .map(Eatable::getOpportunityAmbushAttention)
                 .min(Comparator.comparingInt(e -> e))
                 .orElse(0);
     }

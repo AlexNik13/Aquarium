@@ -40,7 +40,11 @@ public class Animal {
         return speedBehavior.countSpeed(weight);
     }
 
-    public int getOpportunityAmbush (){
+    public int getOpportunityAmbushStealth (){
+        return ambushBehavior.valueAmbush(getWeight(), getSpeed());
+    }
+
+    public int getOpportunityAmbushAttention (){
         return ambushBehavior.valueAmbush(getWeight(), getSpeed());
     }
 }

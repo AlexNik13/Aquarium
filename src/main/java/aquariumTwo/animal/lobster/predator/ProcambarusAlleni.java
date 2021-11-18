@@ -23,7 +23,7 @@ public class ProcambarusAlleni extends Lobster implements Predator {
 
     @Override
     public boolean isCatch(Eatable eatable){
-        if(getSpeed() > eatable.getSpeed() || getOpportunityAmbush() > eatable.getOpportunityAmbush()){
+        if(getSpeed() > eatable.getSpeed() || getOpportunityAmbushStealth() > eatable.getOpportunityAmbushAttention()){
             return true;
         }
         return false;
