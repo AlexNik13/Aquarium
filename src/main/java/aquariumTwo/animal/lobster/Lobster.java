@@ -6,8 +6,6 @@ import aquariumTwo.animal.behaviors.ambush.AmbushBehavior;
 
 public class Lobster extends Animal {
 
-
-
     public Lobster(int weight, SpeedBehavior behavior) {
         super(weight, behavior);
 
