@@ -1,9 +1,10 @@
 package aquariumTwo.animal.fish.predator;
 
 import aquariumTwo.animal.Predator;
+import aquariumTwo.animal.behaviors.BaseSpeedFish;
 import aquariumTwo.animal.fish.Fish;
 import aquariumTwo.animal.Eatable;
-import aquariumTwo.animal.speed.SpeedPiranha;
+import aquariumTwo.animal.behaviors.SpeedPiranha;
 
 import java.util.Formatter;
 
@@ -11,7 +12,7 @@ public class Piranha extends Fish implements Predator {
     private int amountEat;
 
     public Piranha(int weight) {
-        super(weight, new SpeedPiranha());
+        super(weight, new BaseSpeedFish(0.2));
     }
 
     @Override

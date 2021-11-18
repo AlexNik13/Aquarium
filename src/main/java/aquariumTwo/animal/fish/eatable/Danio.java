@@ -1,14 +1,15 @@
 package aquariumTwo.animal.fish.eatable;
 
 import aquariumTwo.animal.Eatable;
+import aquariumTwo.animal.behaviors.BaseSpeedFish;
 import aquariumTwo.animal.fish.Fish;
-import aquariumTwo.animal.speed.SpeedDanio;
+import aquariumTwo.animal.behaviors.SpeedDanio;
 
 import java.util.Formatter;
 
 public class Danio extends Fish implements Eatable {
     public Danio(int weight) {
-        super(weight, new SpeedDanio());
+        super(weight, new BaseSpeedFish(0.4));
     }
 
     @Override

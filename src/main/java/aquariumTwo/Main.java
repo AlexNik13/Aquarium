@@ -25,11 +25,11 @@ public class Main {
             aquariumTwo.addFishEatable(new Amano(RND.weight(20)));
         }
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 5; i++) {
             aquariumTwo.addFishPredators(new Piranha(RND.weight(10)));
         }
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 5; i++) {
             aquariumTwo.addFishPredators(new ProcambarusAlleni(RND.weight(10)));
         }
 

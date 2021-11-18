@@ -1,9 +1,10 @@
-package aquariumTwo.animal.speed;
+package aquariumTwo.animal.behaviors;
 
-public class SpeedPiranha implements SpeedBehavior{
+public class SpeedProcambarusAlleni implements SpeedBehavior{
+
     @Override
     public int countSpeed(int wight) {
-        int baseSpeed = 100;
+        int baseSpeed = 60;
         int slowDown = (int)(wight * 0.3);
         int speed = baseSpeed -  slowDown;
         return Math.max(speed, 0);

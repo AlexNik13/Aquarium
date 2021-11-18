@@ -1,14 +1,15 @@
 package aquariumTwo.animal.fish.eatable;
 
 import aquariumTwo.animal.Eatable;
+import aquariumTwo.animal.behaviors.BaseSpeedFish;
 import aquariumTwo.animal.fish.Fish;
-import aquariumTwo.animal.speed.SpeedGuppy;
+import aquariumTwo.animal.behaviors.SpeedGuppy;
 
 import java.util.Formatter;
 
 public class Guppy extends Fish implements Eatable {
     public Guppy(int weight) {
-        super(weight, new SpeedGuppy());
+        super(weight, new BaseSpeedFish(0.3));
     }
 
     @Override

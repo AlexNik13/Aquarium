@@ -1,7 +1,7 @@
 package aquariumTwo.animal.shrimp;
 
 import aquariumTwo.animal.Animal;
-import aquariumTwo.animal.speed.SpeedBehavior;
+import aquariumTwo.animal.behaviors.SpeedBehavior;
 
 public class Shrimp extends Animal {
 

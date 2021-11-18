@@ -3,8 +3,7 @@ package aquariumTwo.animal.lobster.predator;
 import aquariumTwo.animal.Eatable;
 import aquariumTwo.animal.Predator;
 import aquariumTwo.animal.lobster.Lobster;
-import aquariumTwo.animal.speed.SpeedBehavior;
-import aquariumTwo.animal.speed.SpeedProcambarusAlleni;
+import aquariumTwo.animal.behaviors.SpeedProcambarusAlleni;
 
 import java.util.Formatter;
 

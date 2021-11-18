@@ -1,4 +1,4 @@
-package aquariumTwo.animal.speed;
+package aquariumTwo.animal.behaviors;
 
 public class SpeedAmano implements SpeedBehavior{
     @Override
