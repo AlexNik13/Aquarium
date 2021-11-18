@@ -3,7 +3,7 @@ package aquariumTwo.animal.behaviors;
 import common.RND;
 
 public class BaseSpeedLobster implements SpeedBehavior{
-    private final int SPEED_BASE = RND.speed() /2;
+    private final int SPEED_BASE = RND.speed() /4 - 200;
     private final double INDEX_WIGHT;
 
     public BaseSpeedLobster(double indexWight) {
