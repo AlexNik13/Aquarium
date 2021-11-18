@@ -11,4 +11,7 @@ public class RND {
     public static int weight(int value){
         return RND.nextInt(value) + 1;
     }
+    public static int speed(){
+        return (int) (RND.nextInt(50) + 100 * Math.random());
+    }
 }
