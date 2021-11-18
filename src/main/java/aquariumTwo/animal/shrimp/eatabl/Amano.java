@@ -2,13 +2,13 @@ package aquariumTwo.animal.shrimp.eatabl;
 
 import aquariumTwo.animal.Eatable;
 import aquariumTwo.animal.shrimp.Shrimp;
-import aquariumTwo.animal.behaviors.SpeedAmano;
+import aquariumTwo.animal.behaviors.BaseSpeedShrimp;
 
 import java.util.Formatter;
 
 public class Amano extends Shrimp implements Eatable {
     public Amano(int weight) {
-        super(weight, new SpeedAmano());
+        super(weight, new BaseSpeedShrimp(0.4));
     }
 
     @Override
