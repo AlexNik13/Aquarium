@@ -1,6 +1,9 @@
-package aquariumTwo.fish;
+package aquariumTwo.animal.fish.predator;
 
-import aquariumTwo.fish.speed.SpeedPiranha;
+import aquariumTwo.animal.Predator;
+import aquariumTwo.animal.fish.Fish;
+import aquariumTwo.animal.Eatable;
+import aquariumTwo.animal.speed.SpeedPiranha;
 
 import java.util.Formatter;
 
@@ -23,10 +26,6 @@ public class Piranha extends Fish implements Predator {
             return true;
         }
         return false;
-    }
-
-    public int getAmountEat() {
-        return amountEat;
     }
 
     @Override

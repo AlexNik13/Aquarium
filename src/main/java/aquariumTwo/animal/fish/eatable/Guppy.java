@@ -1,10 +1,12 @@
-package aquariumTwo.fish;
+package aquariumTwo.animal.fish.eatable;
 
-import aquariumTwo.fish.speed.SpeedGuppy;
+import aquariumTwo.animal.Eatable;
+import aquariumTwo.animal.fish.Fish;
+import aquariumTwo.animal.speed.SpeedGuppy;
 
 import java.util.Formatter;
 
-public class Guppy extends Fish implements Eatable{
+public class Guppy extends Fish implements Eatable {
     public Guppy(int weight) {
         super(weight, new SpeedGuppy());
     }

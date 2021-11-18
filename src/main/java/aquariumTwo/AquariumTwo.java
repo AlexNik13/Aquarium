@@ -1,11 +1,11 @@
 package aquariumTwo;
 
-import aquariumTwo.fish.*;
+import aquariumTwo.animal.Eatable;
+import aquariumTwo.animal.Predator;
 import common.RND;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Optional;
 
 public class AquariumTwo {
     private ArrayList<Predator> predators = new ArrayList<>();
@@ -51,29 +51,27 @@ public class AquariumTwo {
 
     public void addFishEatable(Eatable eatable ) {
         eatables.add(eatable);
-
     }
 
     public void addFishPredators(Predator predator) {
             predators.add(predator);
     }
 
-    private void removeEatable(Eatable guppy) {
-        eatables.remove(guppy);
+    private void removeEatable(Eatable eatable) {
+        eatables.remove(eatable);
     }
 
     private Predator getPredator() {
-        return predators.get(RND.fish(predators.size()));
+        return predators.get(RND.animal(predators.size()));
     }
 
     private Eatable getEatable() {
-        return eatables.get(RND.fish(eatables.size()));
+        return eatables.get(RND.animal(eatables.size()));
     }
 
     private boolean checkCanPredatorsCatchFood(){
         int maxSpeedPredator = getMaxSpeedPredator();
         int minSpeedEatable = getMinSpeedEatable();
-
         return maxSpeedPredator > minSpeedEatable;
     }
 

@@ -1,4 +1,6 @@
-package aquariumTwo.fish;
+package aquariumTwo.animal;
+
+import aquariumTwo.animal.Eatable;
 
 public interface Predator {
     boolean isCatch(Eatable fish);

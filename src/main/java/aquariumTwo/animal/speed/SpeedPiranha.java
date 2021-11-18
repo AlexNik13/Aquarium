@@ -1,4 +1,4 @@
-package aquariumTwo.fish.speed;
+package aquariumTwo.animal.speed;
 
 public class SpeedPiranha implements SpeedBehavior{
     @Override

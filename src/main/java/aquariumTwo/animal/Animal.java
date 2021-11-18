@@ -1,12 +1,12 @@
-package aquariumTwo.fish;
+package aquariumTwo.animal;
 
-import aquariumTwo.fish.speed.SpeedBehavior;
+import aquariumTwo.animal.speed.SpeedBehavior;
 
-public class Fish {
+public class Animal {
     private int weight;
     private SpeedBehavior speedBehavior;
 
-    public Fish(int weight, SpeedBehavior behavior) {
+    public Animal(int weight, SpeedBehavior behavior) {
         this.weight = checkWeight(weight);
         this.speedBehavior = behavior;
     }
