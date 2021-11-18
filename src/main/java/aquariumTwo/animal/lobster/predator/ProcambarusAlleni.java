@@ -2,8 +2,8 @@ package aquariumTwo.animal.lobster.predator;
 
 import aquariumTwo.animal.Eatable;
 import aquariumTwo.animal.Predator;
+import aquariumTwo.animal.behaviors.BaseSpeedLobster;
 import aquariumTwo.animal.lobster.Lobster;
-import aquariumTwo.animal.behaviors.SpeedProcambarusAlleni;
 
 import java.util.Formatter;
 
@@ -11,7 +11,7 @@ public class ProcambarusAlleni extends Lobster implements Predator {
     private int amountEat;
 
     public ProcambarusAlleni(int weight) {
-        super(weight, new SpeedProcambarusAlleni());
+        super(weight, new BaseSpeedLobster(0.5));
     }
 
     @Override

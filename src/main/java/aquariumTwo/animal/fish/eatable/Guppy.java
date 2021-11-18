@@ -3,7 +3,6 @@ package aquariumTwo.animal.fish.eatable;
 import aquariumTwo.animal.Eatable;
 import aquariumTwo.animal.behaviors.BaseSpeedFish;
 import aquariumTwo.animal.fish.Fish;
-import aquariumTwo.animal.behaviors.SpeedGuppy;
 
 import java.util.Formatter;
 

@@ -4,7 +4,6 @@ import aquariumTwo.animal.Predator;
 import aquariumTwo.animal.behaviors.BaseSpeedFish;
 import aquariumTwo.animal.fish.Fish;
 import aquariumTwo.animal.Eatable;
-import aquariumTwo.animal.behaviors.SpeedPiranha;
 
 import java.util.Formatter;
 
