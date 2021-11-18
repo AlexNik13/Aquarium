@@ -1,6 +1,6 @@
 package aquariumTwo.animal;
 
-import aquariumTwo.animal.behaviors.SpeedBehavior;
+import aquariumTwo.animal.behaviors.speed.SpeedBehavior;
 import aquariumTwo.animal.behaviors.ambush.AmbushBehavior;
 import aquariumTwo.animal.behaviors.ambush.NoAmbush;
 

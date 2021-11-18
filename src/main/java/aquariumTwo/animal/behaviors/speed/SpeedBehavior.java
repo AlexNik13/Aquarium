@@ -1,4 +1,4 @@
-package aquariumTwo.animal.behaviors;
+package aquariumTwo.animal.behaviors.speed;
 
 public interface SpeedBehavior {
 

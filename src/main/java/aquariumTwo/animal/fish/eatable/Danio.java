@@ -1,7 +1,7 @@
 package aquariumTwo.animal.fish.eatable;
 
 import aquariumTwo.animal.Eatable;
-import aquariumTwo.animal.behaviors.BaseSpeedFish;
+import aquariumTwo.animal.behaviors.speed.BaseSpeedFish;
 import aquariumTwo.animal.behaviors.ambush.Attention;
 import aquariumTwo.animal.fish.Fish;
 

@@ -3,7 +3,7 @@ package aquariumTwo.animal.shrimp.eatabl;
 import aquariumTwo.animal.Eatable;
 import aquariumTwo.animal.behaviors.ambush.Attention;
 import aquariumTwo.animal.shrimp.Shrimp;
-import aquariumTwo.animal.behaviors.BaseSpeedShrimp;
+import aquariumTwo.animal.behaviors.speed.BaseSpeedShrimp;
 
 import java.util.Formatter;
 

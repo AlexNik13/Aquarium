@@ -1,7 +1,7 @@
 package aquariumTwo.animal.fish;
 
 import aquariumTwo.animal.Animal;
-import aquariumTwo.animal.behaviors.SpeedBehavior;
+import aquariumTwo.animal.behaviors.speed.SpeedBehavior;
 import aquariumTwo.animal.behaviors.ambush.AmbushBehavior;
 
 public class Fish extends Animal {

@@ -2,7 +2,7 @@ package aquariumTwo.animal.lobster.predator;
 
 import aquariumTwo.animal.Eatable;
 import aquariumTwo.animal.Predator;
-import aquariumTwo.animal.behaviors.BaseSpeedLobster;
+import aquariumTwo.animal.behaviors.speed.BaseSpeedLobster;
 import aquariumTwo.animal.behaviors.ambush.Stealth;
 import aquariumTwo.animal.lobster.Lobster;
 
